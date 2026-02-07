@@ -1,13 +1,28 @@
 {
   "name": "focus_guard_mcp",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Sistema inteligente de gestión de productividad con IA - Mantén el foco en tus proyectos activos",
+  "main": "src/strict_boss.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npx ts-node src/strict_boss.ts",
+    "audit": "npx ts-node src/auditor.ts",
+    "tools": "npx ts-node src/tools.ts",
+    "test:firebase": "npx ts-node src/firebase.ts",
+    "test:whatsapp": "npx ts-node src/whatsapp.ts",
+    "list-models": "npx ts-node src/list-models.ts",
+    "build": "tsc",
+    "dev": "ts-node src/strict_boss.ts"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "productivity",
+    "ai",
+    "gemini",
+    "firebase",
+    "project-management",
+    "focus",
+    "automation"
+  ],
+  "author": "Wartudev <Wellingtonartu.17@gmail.com>",
   "license": "ISC",
   "type": "module",
   "dependencies": {
@@ -16,6 +31,7 @@
     "dotenv": "^17.2.3",
     "firebase-admin": "^12.7.0",
     "ts-node": "^10.9.2",
+    "twilio": "^5.12.1",
     "typescript": "^5.9.3"
   }
 }
